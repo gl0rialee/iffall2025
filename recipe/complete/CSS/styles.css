@@ -281,7 +281,6 @@ section.intro{
   display: block;
 }
 
-
 @media (max-width: 960px) {
     main { width: 95%; }
 
