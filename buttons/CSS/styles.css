@@ -1,0 +1,453 @@
+body {
+    color: #333;
+    font-family: 'Open Sans', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    margin: 40px;
+}
+
+h1 {
+     font-size: 30px;
+     margin-bottom: 40px;
+}
+
+.button_container {
+    border: 1px solid #ddd;
+    margin: 0 10px 10px 0;
+    padding: 20px;
+    width: 300px;
+    height: 300px;
+    float: left;
+    overflow: hidden;
+    box-sizing: border-box;
+    text-align: center;
+    perspective: 1000px;
+}
+
+
+/* --- 1. Apple --- */
+a#btn_apple {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    justify-content: center; 
+    position: relative;
+    width: 140px;
+    height: 140px;
+    box-sizing: border-box;
+    border-radius: 50%; 
+    margin: auto;
+    margin-top: 50px;
+    text-decoration: none;
+    transition: all .3s ease;
+    overflow: hidden;
+}
+
+a#btn_apple i.fa-apple {
+    font-size: 70px; 
+    position: relative;
+    color: #1d1d1f; 
+    transition: color 0.3s ease, background-position 0.5s ease; 
+}
+
+a#btn_apple:hover {
+    transform: scale(1.05);
+}
+
+a#btn_apple:hover i.fa-apple {
+    color: rgb(127, 127, 127); 
+    background-position: 0 0;
+}
+
+/* --- 2. Coca-Cola --- */
+
+a#btn_coke {
+    display: flex; 
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    width: 100px; 
+    height: 60px; 
+    margin: auto;
+    margin-top: 100px; 
+    color: #000000; 
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    text-decoration: none;
+    letter-spacing: 1px;
+    transition: all 0.3s ease; 
+}
+a#btn_coke img {
+    position: absolute;
+    height: 150%; 
+    width: auto;
+    max-width: 80%; 
+    opacity: 1; 
+    transform: translateX(0); 
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+a#btn_coke span {
+    position: absolute;
+    opacity: 0; 
+    transform: translateX(100%); 
+    font-size: 24px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-style: italic;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: #000000;
+    transition: all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94); 
+}
+
+a#btn_coke:hover img {
+    opacity: 0; 
+    transform: translateX(-100%); 
+}
+
+a#btn_coke:hover span {
+    opacity: 1; 
+    transform: translateX(0); 
+}
+
+
+a#btn_twitter {
+    display: inline-block;
+    height: 40px;
+    box-sizing: border-box;
+    border-radius: 3px;
+    margin: auto;
+    margin-top: 105px;
+    padding: 10px 30px 0 30px;
+    background-color: #56cdf1;
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Arial', sans-serif;
+    font-weight: bolder;
+    text-decoration: none;
+}
+
+a#btn_twitter:hover {
+    background: #0d52a1;
+    transform: rotate3d(0, 1, 0, 35deg);
+    box-shadow: 0 10px 60px #021a37;
+}
+
+/* --- 4. The New Yorker --- */
+a#btn_newyork {
+    display: inline-block;
+    position: relative; 
+    margin:auto;
+    margin-top: 100px;
+    padding: 7px 20px;
+    background-color: #fff;
+    color: #303030;
+    font-family: 'Georgia', 'Times New Roman', serif; 
+    font-size: 18px;
+    text-decoration: none;
+    border: 1px solid #303030;
+    transition: all .2s ease;
+    overflow: hidden; 
+}
+
+a#btn_newyork:before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: -100%; 
+    background-color: #6e6d6d;
+    transition: all .2s ease;
+}
+
+a#btn_newyork:hover {
+    color: #fff; 
+}
+
+a#btn_newyork:hover:before {
+    left: 0; 
+}
+
+a#btn_newyork span {
+    position: relative;
+    z-index: 10; 
+}
+
+.button_container {
+    text-align: center;
+    margin-top: 80px;
+}
+
+/* --- 5. Harley Davidson--- */
+#btn_harley-davidson {
+    display: inline-block;
+    width: 250px;  /* Adjust to your desired size */
+    height: 250px; /* Adjust to your desired size */
+    text-align: center;
+    text-decoration: none;
+    position: relative;
+}
+
+/* Image styling */
+#btn_harley-davidson img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 70%; /* Ensure images don't stretch */
+    max-height: 70%; /* Maintain aspect ratio */
+    transition: opacity 0.35s ease-in-out;
+}
+
+/* Initially, the "before" image is visible, and "after" is hidden */
+.harley-before {
+    opacity: 1;
+}
+
+.harley-after {
+    opacity: 0;
+}
+
+/* Hover effect: hide the first image, show the second one */
+#btn_harley-davidson:hover .harley-before {
+    opacity: 0;
+}
+
+#btn_harley-davidson:hover .harley-after {
+    opacity: 1;
+}
+
+/* --- 6. Lyft --- */
+a#btn_lyft {
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 10px; 
+    margin-top: 90px;
+    padding: 10px 40px;
+    background-color: #FF00BF;
+    border: 3px solid #FF00BF;
+    color: black;
+    font-size: 30px;
+    font-family:'Ubuntu', sans-serif;
+    font-weight: bold;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+a#btn_lyft:hover {
+    background-color: black; 
+    color: #FF00BF;
+    border-color: black;
+    transform: translateY(-10px); 
+    box-shadow: 0 10px 30px #FF00BF;
+}
+
+/* --- 7. Instagram --- */
+a#btn_insta {
+  display: inline-block;
+  text-decoration: none;
+  position: relative;
+  margin-top: 60px;
+  width: 120px;  /* adjust to match the width of your images */
+  height: 120px; /* adjust to match the height of your images */
+}
+
+/* Both images will be stacked */
+a#btn_insta img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%; /* Adjust width based on your image size */
+  height: 100%; /* Adjust height based on your image size */
+  transition: opacity 0.5s ease-in-out;
+}
+
+/* Default Instagram image visible */
+a#btn_insta .insta_default {
+  opacity: 1;
+}
+
+/* Instagram logo hidden by default */
+a#btn_insta .insta_hover {
+  opacity: 0;
+}
+
+/* On hover — hide default image and show logo */
+a#btn_insta:hover .insta_default {
+  opacity: 0;
+  border-radius: 3px;
+}
+
+a#btn_insta:hover .insta_hover {
+  opacity: 1;
+  border-radius: 3px;
+}
+
+/* Optional animation effect */
+@keyframes switch {
+  0% { background-color: #dd2a7b65; }
+  50% { background-color: #feda7780; }
+  51% { background-color: #f5852982; }
+  100% { background-color: #8234af81; }
+}
+
+a#btn_insta:hover {
+  animation: switch 2s infinite;
+}
+
+/* --- Cartoon Network Button (Color Invert & Bounce) --- */
+a#btn_cn {
+    display: inline-block;
+    margin: auto;
+    margin-top: 80px;
+    width: 100px;
+    height: 100px;
+    text-decoration: none;
+    position: relative;
+    transition: all 0.3s ease-out;
+}
+
+a#btn_cn img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg); /* Start without rotation */
+    filter: grayscale(100%) sepia(30%); /* Start with grayscale + sepia */
+    transition: transform 0.4s ease-out, filter 0.4s ease-out, box-shadow 0.4s ease-out;
+}
+
+/* Hover effect */
+a#btn_cn:hover img {
+    transform: translate(-50%, -50%) scale(1.2) rotate(15deg); /* Scale and rotate on hover */
+    filter: grayscale(0%) sepia(0%); /* Remove grayscale and sepia */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add shadow effect */
+    animation: wiggle 0.6s ease-in-out infinite; /* Add the wiggle animation */
+}
+
+/* Keyframes for wiggle effect */
+@keyframes wiggle {
+    0% { transform: translate(-50%, -50%) rotate(0deg); }
+    25% { transform: translate(-50%, -50%) rotate(-10deg); }
+    50% { transform: translate(-50%, -50%) rotate(5deg); }
+    75% { transform: translate(-50%, -50%) rotate(-15deg); }
+    100% { transform: translate(-50%, -50%) rotate(3deg); }
+}
+
+/* --- Nike Button (Swoosh to Text Slide) --- */
+a#btn_nike {
+    display: inline-block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    text-decoration: none;
+    transition: all 0.5s;
+    overflow: hidden;
+}
+
+a#btn_nike img {
+    position: absolute;
+    margin-top: 50px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) rotate(0deg);
+    width: 100px; /* Adjust size of logo */
+    height: auto;
+    transition: transform 0.5s ease, opacity 0.5s ease;
+}
+
+a#btn_nike span {
+    color: white;
+    font-family: 'Gill Sans MT', sans-serif;
+    font-size: 24px;
+    font-weight: 800;
+    text-transform: uppercase;
+    z-index: 99;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    opacity: 0; /* Initially hidden */
+    transition: opacity 0.5s ease;
+}
+
+/* Hover Effect */
+a#btn_nike:hover img {
+    transform: translate(-50%, -50%) rotate(30deg) scale(1);
+    opacity: 0.8;
+}
+
+a#btn_nike:hover span {
+    margin-top: 20px;
+    margin-left: 15px;
+    opacity: 1; /* Show text when hovering */
+    color: #ea553b; /* Change text color on hover */
+}
+
+/* --- 10. Tesla (with smooth zoom) --- */
+
+
+a#btn_tesla {
+    display: inline-flex; 
+    align-items: center;
+    justify-content: center;
+    position: relative; 
+    overflow: hidden;
+    transform-style: preserve-3d;  
+    transition: all 0.4s ease; 
+    width: 200px; 
+    height: 100px;
+    margin: auto;
+    margin-top: 90px; 
+}
+
+a#btn_tesla img {
+    display: block;
+    width: 50%;
+    height: auto;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    transition: transform 1.2s cubic-bezier(0.10, 1, 0.5, 1);
+    transform-style: preserve-3d;
+}
+
+
+a#btn_tesla:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -150%; 
+    width: 100%;
+    height: 100%;
+    transform: skewX(-20deg); 
+    z-index: 10; 
+    transition: left 0.7s ease-in-out;
+}
+
+a#btn_tesla:hover {
+    transform: translateY(-0.5px);
+}
+
+a#btn_tesla:hover img {
+    transform: translate(-50%, -50%) rotateY(360deg); 
+}
+
+a#btn_tesla:hover::before {
+    left: 100%; 
+}
