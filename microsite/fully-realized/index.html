@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <title>Microsite Initial</title>
+</head>
+
+<body class="overview fade-in-up">
+  <header class="fade-in-up">
+    <nav class="fade-in-up">
+      <div class="header-box fade-in-up">
+        <a href="index.html">
+        <img id="logo" src="images/Over_the_Garden_Wall_logo.webp" alt="logo" class="fade-in-up">
+        </a>
+      </div>
+      
+      <a href="cast.html">Cast</a>
+      <a href="episodes.html">Episodes</a>
+      <a href="awards.html">Awards</a>
+      <span class="end-diamond fade-in-up"></span>
+    </nav>
+  </header>
+
+  <main class="fade-in-up">
+    <h1 class="fade-in-up">ABOUT</h1>
+
+    <div class="about-section fade-in-up">
+      <img src="images/1.jpg" alt="Beatrice" class="about-image fade-in-up">
+
+      <p class="about-text fade-in-up">
+        Over the Garden Wall is a 10-episode American animated miniseries from Cartoon Network. 
+        Each episode is about 11 minutes long and the whole story aired over five nights from 
+        November 3–7, 2014. Created by Patrick McHale (who also worked on Adventure Time), it’s 
+        based on his earlier short film “Tome of the Unknown.” The story follows half-brothers Wirt 
+        and Greg, who get lost in a mysterious forest called the Unknown. Guided (and sometimes misled) 
+        by a talking bluebird named Beatrice and an ominous Woodsman, they encounter strange towns, 
+        magical creatures, and an ancient being known as the Beast as they search for a way back home.
+      </p>
+
+      <div class="about-gallery fade-in-up">
+  <a href="episodes.html">
+    <img src="images/2.webp" alt="Over the Garden Wall Scene 1" class="fade-in-up">
+  </a>
+  <a href="episodes.html">
+    <img src="images/3.webp" alt="Over the Garden Wall Scene 2" class="fade-in-up">
+  </a>
+  <a href="episodes.html">
+    <img src="images/4.webp" alt="Over the Garden Wall Scene 3" class="fade-in-up">
+  </a>
+  <a href="episodes.html">
+    <img src="images/5.webp" alt="Over the Garden Wall Scene 4" class="fade-in-up">
+  </a>
+  <a href="episodes.html">
+    <img src="images/6.webp" alt="Over the Garden Wall Scene 5" class="fade-in-up">
+  </a>
+  <a href="episodes.html">
+    <img src="images/7.webp" alt="Over the Garden Wall Scene 6" class="fade-in-up">
+  </a>
+</div>
+
+      <!-- Quotes -->
+      <div class="quotes-section fade-in-up">
+
+        <div class="quote fade-in-up">
+          <p class="quote-text fade-in-up">
+            “Before it even premiered, the <em>LA Times</em> called it ‘funny, creepy’ and hinted that 
+            the premise is more layered and complex than it sounds at first.”
+          </p>
+          <div class="quote-line fade-in-up"></div>
+          <p class="quote-source fade-in-up">Los Angeles Times</p>
+        </div>
+
+        <div class="quote fade-in-up">
+          <p class="quote-text fade-in-up">
+            “The show holds about a 94% approval rating. Critics say that its modern sensibilities 
+            blend perfectly with a fairy-tale setting, creating a witty, whimsical series that works 
+            for viewers of all ages.”
+          </p>
+          <div class="quote-line fade-in-up"></div>
+          <p class="quote-source fade-in-up">Critics Consensus</p>
+        </div>
+
+        <div class="quote fade-in-up">
+          <p class="quote-text fade-in-up">
+            “Described the show’s world as a world worth getting lost in, emphasizing how rich and 
+            intriguing the setting of the Unknown is.”
+          </p>
+          <div class="quote-line fade-in-up"></div>
+          <p class="quote-source fade-in-up">TV World</p>
+        </div>
+
+      </div>
+    </div>
+  </main>
+
+ <footer>
+  <p class="footer-text">
+      © Wikipedia &nbsp;|&nbsp; Designed by Gloria Lee &nbsp;|&nbsp; Directed by Elma Ademovic
+    </p>
+  </footer>
+
+  <!-- Fade-in Scroll Script -->
+  <script>
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.2 });
+
+  const fadeElements = document.querySelectorAll('.fade-in-up');
+  fadeElements.forEach(el => observer.observe(el));
+
+  // 🪄 Show elements already visible on page load
+  window.addEventListener('load', () => {
+    fadeElements.forEach(el => {
+      const rect = el.getBoundingClientRect();
+      if (rect.top < window.innerHeight) {
+        el.classList.add('visible');
+      }
+    });
+  });
+</script>
+</body>
+</html>
