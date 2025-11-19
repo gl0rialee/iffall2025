@@ -102,7 +102,7 @@ nav span.end-diamond { right: 2.5%; }
 /* ----------------- Main ----------------- */
 main {
   width: 75%;
-  margin: 4rem auto 0 auto; /* ⬅️ keeps ABOUT below nav */
+  margin: 4rem auto 0 auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -286,23 +286,23 @@ footer {
 }
 
 .card-inner {
-  transition: transform 0.8s ease; /* flip speed */
+  transition: transform 0.8s ease;
 }
 
 .card:hover .card-inner {
   transform: rotateY(180deg);
-  transition-duration: 0.7s; /* keep nice long flip */
+  transition-duration: 0.7s;
 }
 
 .card:not(:hover) .card-inner {
-  transition-duration: 0.3s; /* faster return */
+  transition-duration: 0.3s;
 }
 
 .card-front, .card-back {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: space-between; /* pushes image up, text down */
+  justify-content: space-between;
   padding: 1.5rem;
 }
 
@@ -326,8 +326,8 @@ footer {
 .card-image {
   width: 150px;
   height: 150px;
-  object-fit: cover;         /* ensures image fills circle without distortion */
-  object-position: center 20%; /* adjusts how image is cropped inside the circle */
+  object-fit: cover;        
+  object-position: center 20%; 
   border-radius: 50%;
   margin-top: 0rem;
   margin-bottom: 1.5rem;
@@ -345,7 +345,7 @@ footer {
 
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(4, 1fr); /* ⬅️ now 4 cards per row */
+  grid-template-columns: repeat(4, 1fr);
   gap: 2rem;
   justify-items: center;
 }
@@ -428,8 +428,8 @@ footer {
   flex-direction: column;
   gap: 3.5rem;
   margin-top: 3rem;
-  max-width: 1100px; /* slightly wider for cinematic look */
-  margin-left: -12rem; /* pushes entire section closer to left */
+  max-width: 1100px; 
+  margin-left: -12rem; 
 }
 
 .episode-card {
@@ -440,8 +440,8 @@ footer {
 }
 
 .episode-image {
-  width: 480px;  /* bigger image width */
-  height: 320px; /* proportional height */
+  width: 480px;  
+  height: 320px; 
   border-radius: 20px;
   object-fit: cover;
   flex-shrink: 0;
@@ -474,7 +474,7 @@ footer {
 }
 
 .episode-meta {
-  margin-top: 0.8rem; /* space below main text */
+  margin-top: 0.8rem; 
   font-size: 15px;
   color: rgba(213, 181, 125, 0.85);
   display: flex;
@@ -529,7 +529,7 @@ footer {
   gap: 0.5rem;
 }
 
-.meta-item:nth-child(5) { /* targets the star rating part */
+.meta-item:nth-child(5) { 
   color: #d5b57d;
   text-shadow: 0 0 6px rgba(213, 181, 125, 0.4);
   letter-spacing: 0.5px;
@@ -543,7 +543,7 @@ footer {
 .awards-section {
   text-align: center;
   color: var(--green);
-  margin: 0;          /* remove extra top & bottom margin */
+  margin: 0;          
   padding: 0; 
 }
 
@@ -566,7 +566,7 @@ footer {
   grid-template-columns: repeat(3, 1fr);
   width: 100vw;
   margin-left: calc(-1 * (50vw - 50%));
-  height: calc(100vh - 220px); /* adjust if header is taller/shorter */
+  height: calc(100vh - 220px); 
 }
 
 /* Each panel */
@@ -590,13 +590,12 @@ footer {
   background: #012509;
 }
 
-/* The actual image inside the column */
 .award-bg-image {
   position: absolute;
   width: 100%;
   height: 100%;
   object-fit: cover;
-  opacity: 0.4; /* adjust for translucency */
+  opacity: 0.4; 
   z-index: 1;
 }
 
@@ -623,12 +622,12 @@ footer {
 }
 
 main {
-  margin-bottom: 5rem;  /* ensures main touches footer */
+  margin-bottom: 5rem; 
   padding-bottom: 0;
 }
 
 footer {
-  margin-top: 0rem;     /* removes any gap above footer */
+  margin-top: 0rem;     
 }
 
 /* Responsive */
