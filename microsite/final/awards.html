@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="CSS/styles.css">
+  <title>Awards</title>
+</head>
+
+<body class="fade-in-up">
+  <!-- Header -->
+  <header class="fade-in-up">
+    <nav class="fade-in-up">
+      <div class="header-box fade-in-up">
+        <a href="index.html">
+          <img id="logo" src="images/Over_the_Garden_Wall_logo.webp" alt="Over the Garden Wall Logo" class="fade-in-up">
+        </a>
+      </div>
+      <a id="cast" href="cast.html" class="fade-in-up">Cast</a>
+      <a id="episodes" href="episodes.html" class="fade-in-up">Episodes</a>
+      <a id="awards" href="awards.html" class="fade-in-up">Awards</a>
+      <span class="end-diamond fade-in-up"></span>
+    </nav>
+  </header>
+
+  <!-- Main -->
+  <main>
+    <section class="awards-section fade-in-up">
+      <h2>AWARDS</h2>
+      <p class="awards-subtitle fade-in-up">
+        —<br><br>
+        <em>A Modern Animated Classic</em>
+        <br>
+        <em>Winner of the Emmy for Outstanding Animated Program</em>
+      </p>
+
+      <div class="awards-fullwidth fade-in-up">
+      <!-- Storytelling & Direction -->
+      <div class="award-panel fade-in-up">
+        <img src="images/8.webp" alt="Storytelling Background" class="award-bg-image">
+        <div class="award-content">
+          <h3>Storytelling & Direction</h3>
+          <p>Primetime Emmy Award (2015) — <em>Outstanding Animated Program</em> (Winner)</p>
+          <p>Annie Award Nomination (2015) — <em>Outstanding Achievement in Directing in an Animated TV/Broadcast Production</em></p>
+          <p><em>Broadcast Production</em> — (Robert Alvarez, Ken Bruce, Larry Leichliter)</p>
+          <p>Reuben Award (2015) — <em>TV Animation</em>, awarded to creator Patrick McHale (Winner)</p>
+        </div>
+      </div>
+
+      <!-- Visual Arts & Animation -->
+      <div class="award-panel fade-in-up">
+        <img src="images/9.webp" alt="Visual Arts Background" class="award-bg-image">
+        <div class="award-content">
+          <h3>Visual Arts & Animation</h3>
+          <p>Primetime Emmy Award (2015) — <em>Outstanding Individual Achievement in Animation</em> (Nick Cross, Art Director) (Winner)</p>
+          <p>Ottawa International Animation Festival (2015) — <em>Best Animated Feature</em> (Winner)</p>
+          <p>Annie Award Nomination (2015) — <em>Best Animated TV/Broadcast Production for Children’s Audience</em></p>
+        </div>
+      </div>
+
+      <!-- Legacy & Impact -->
+      <div class="award-panel fade-in-up">
+        <img src="images/10.webp" alt="Legacy Background" class="award-bg-image">
+        <div class="award-content">
+          <h3>Legacy & Impact</h3>
+          <p>Teen Choice Awards (2016) — <em>Choice TV Show: Animated</em> (Nominee)</p>
+          <p>Consistently ranked among the <em>Best Animated Shows of the 2010s</em> by The A.V. Club, Paste Magazine, and Rotten Tomatoes (94% approval)</p>
+          <p>Inspired a <em>10th-anniversary stop-motion short</em> (2024) by Aardman Animations, reviving the original cast and creative team.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+  <!-- Footer -->
+  <footer>
+    <p class="footer-text">
+      © Wikipedia &nbsp;|&nbsp; Designed by Gloria Lee &nbsp;|&nbsp; Directed by Elma Ademovic
+    </p>
+  </footer>
+
+  <!-- Fade-in Scroll Script -->
+  <script>
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, { threshold: 0.2 });
+
+    const fadeElements = document.querySelectorAll('.fade-in-up');
+    fadeElements.forEach(el => observer.observe(el));
+
+    window.addEventListener('load', () => {
+      fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
