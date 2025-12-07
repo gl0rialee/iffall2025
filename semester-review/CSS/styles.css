@@ -1,0 +1,155 @@
+html {
+    background-color: #858585;
+}
+
+h2 {
+    font-family: "Bitcount Prop Single", system-ui;
+  font-optical-sizing: auto;
+  color: #D2FF00;
+  font-weight: 400;
+  font-size: 70px;
+  font-style: normal;
+  line-height: 10px;
+  padding-top: 30px;
+}
+
+h1 {
+    font-family: "Space Mono", monospace;
+    color: rgb(246, 246, 246);
+    font-weight: 500;
+    font-size: 25px;
+    font-style: normal;
+    text-indent: 1.5em;
+    margin-top: -10px;
+}
+
+.wrap {
+    margin: 30px 90px;
+}
+
+.course-name {
+    color: #858585;
+    font-family: Bitcount Prop Single;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    margin-top: 5rem;
+    width: 345px;
+    height: 25px;
+    background-color: #D2FF00;
+    border-radius: 35px;
+    padding: 18px 20px 18px 20px;
+    margin-bottom: -3.5rem;
+    text-align: center;
+}
+
+.course-name1 {
+     color: #858585;
+    font-family: Bitcount Prop Single;
+    font-size: 30px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    margin-top: 7rem;
+    width: 205px;
+    height: 25px;
+    background-color: #D2FF00;
+    border-radius: 35px;
+    padding: 18px 20px 18px 20px;
+    margin-bottom: -3.5rem;
+    margin-top: 3rem;
+    text-align: center;
+}
+img {
+    height: auto;
+    width: 100%;
+}
+
+.class {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    align-items: start;
+    gap: 55px;
+}
+
+.box h3 {
+    color: #D2FF00;
+    font-family: "Geo", sans-serif;
+    font-size: 80px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: -1rem;
+}
+
+.box p {
+    font-family: "Space Mono";
+    color: rgb(246, 246, 246);
+    font-size: 14.5px;
+    font-style: normal;
+    font-weight: 400;
+}
+
+.box .name {
+    font-family: "Space Mono";
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 400;
+    margin-bottom: 0.7rem; 
+}
+
+.image-wrap {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrap img {
+    width: 100%;
+    height: auto;
+    transition: transform 0.35s ease;  /* smooth scaling */
+}
+
+/* hover effect */
+.image-wrap:hover img {
+    transform: scale(1.06);   /* slightly bigger image */
+    filter: blur(0.5px);
+}
+
+span {
+    color: #909090;
+}
+
+.footer {
+   position: fixed;
+   left: 0;
+   bottom: 0;
+   width: 100%;
+   font-family: "Space Mono";
+   font-size: 15px;
+   background-color: #d0ff00dc;
+   color: #858585;
+   text-align: center;
+}
+
+@media (max-width: 1200px) {
+    .class {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 40px;
+    }
+
+    .wrap {
+        margin: 30px 60px;
+    }
+}
+
+@media (max-width: 600px) {
+    .class {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .wrap {
+        margin: 30px 20px;
+    }
+}
